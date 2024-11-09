@@ -32,8 +32,7 @@ from langchain.agents import AgentType
 
 from langchain_openai import OpenAI
 
-llm = OpenAI(model="gpt-4o-mini",
-             )
+llm = OpenAI(model="gpt-4o-mini")
 
 #加载 LangChain 内置的 Tools
 tools = load_tools(["serpapi"], llm=llm)
