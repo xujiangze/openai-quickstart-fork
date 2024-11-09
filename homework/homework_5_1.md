@@ -22,6 +22,7 @@
 pip install google-search-results
 ```
 ```python
+# serp 官方 https://serpapi.com/
 import os
 os.environ["SERPAPI_API_KEY"] = "你的token"
 
