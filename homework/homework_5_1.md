@@ -13,3 +13,30 @@
 ### 时效性问题
 - 诸如天气问题
 ![时效性问题](./images/homework_5_1_q_1.png)
+
+
+### 互联网查询
+使用: serp
+```bash
+# 安装
+pip install google-search-results
+```
+```python
+import os
+os.environ["SERPAPI_API_KEY"] = "你的token"
+
+# 用内置tools替换chatbot的tools
+from langchain.agents import load_tools
+from langchain.agents import initialize_agent
+from langchain.agents import AgentType
+
+from langchain_openai import OpenAI
+
+llm = OpenAI(model="gpt-4o-mini",
+             )
+
+#加载 LangChain 内置的 Tools
+tools = load_tools(["serpapi"], llm=llm)
+```
+
+后续相同问题提问即可
